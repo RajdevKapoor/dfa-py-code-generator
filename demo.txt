@@ -1,0 +1,16 @@
+def isAccepted(String):
+    l = len(String)
+    dfa = 0
+    for i in range(l):
+        if (dfa == 0):
+            dfa = state0(String[i])
+        if (dfa == 1):
+            dfa = state1(String[i])
+        if (dfa == 2):
+            dfa = state2(String[i])
+        if (dfa == 3):
+            dfa = state3(String[i])
+        if (dfa == 4):
+            dfa = state4(String[i])
+        else:
+            return 0
